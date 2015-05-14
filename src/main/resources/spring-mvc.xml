@@ -9,7 +9,7 @@
          http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd ">
 
-	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
+	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入.自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
 	<!-- 加载controller的时候,不加载service,因为此时事物并未生效,若此时加载了service,那么事物无法对service进行拦截 -->
 	<context:component-scan base-package="org.jeewframework.web.*">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" />
@@ -111,16 +111,16 @@
 			<bean class="org.jeewframework.core.interceptors.EncodingInterceptor" />
 		</mvc:interceptor>
 		<!-- 权限拦截器-->
-		<mvc:interceptor>
+		<!--<mvc:interceptor>
 			<mvc:mapping path="/**" />
 			<bean class="org.jeewframework.core.interceptors.AuthInterceptor">
-				<property name="excludeUrls"><!-- 排除下面列表urls，其它的urls进行拦截-->
+				<property name="excludeUrls">&lt;!&ndash; 排除下面列表urls，其它的urls进行拦截&ndash;&gt;
 					<list>
-						<!--<value>loginController.do?goPwdInit</value>-->
+						<value>loginController.do?login</value>
 					</list>
 				</property>
 			</bean>
-		</mvc:interceptor>
+		</mvc:interceptor>-->
 
 	</mvc:interceptors>
 
