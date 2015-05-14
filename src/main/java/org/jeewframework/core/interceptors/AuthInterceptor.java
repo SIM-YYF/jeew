@@ -1,4 +1,4 @@
-package org.jeewframework.interceptors;
+package org.jeewframework.core.interceptors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

@@ -1,4 +1,4 @@
-package org.jeewframework.interceptors;
+package org.jeewframework.core.interceptors;
 
 import java.util.Date;
 

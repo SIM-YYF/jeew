@@ -1,4 +1,4 @@
-package org.jeewframework.common.hibernate.dialect;
+package org.jeewframework.core.common.hibernate.dialect;
 
 public class Dialect
 {

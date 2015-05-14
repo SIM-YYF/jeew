@@ -1,14 +1,12 @@
-package org.jeewframework.common.exception;
+package org.jeewframework.core.common.exception;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
-import org.jeewframework.util.ExceptionUtil;
+import org.jeewframework.core.util.ExceptionUtil;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;

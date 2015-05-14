@@ -16,7 +16,7 @@
 	</context:component-scan>
 
 	<!-- ApplicationContext -->
-	<bean class="org.jeewframework.util.ApplicationContext"></bean>
+	<bean class="org.jeewframework.core.util.ApplicationContext"></bean>
 
 	<!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
 	<bean id="mappingJacksonHttpMessageConverter"
@@ -38,7 +38,7 @@
 			</list>
 		</property>
 		<property name="webBindingInitializer"><!-- 用于将string日期格式转换为date-->
-			<bean class="org.jeewframework.interceptors.JWebBinding" />
+			<bean class="org.jeewframework.core.interceptors.JWebBinding" />
 		</property>
 	</bean>
 
@@ -69,14 +69,14 @@
 
 	<!-- 方言 -->
 	<bean id="dialect"
-		class="org.jeewframework.common.hibernate.dialect.DialectFactoryBean">
+		class="org.jeewframework.core.common.hibernate.dialect.DialectFactoryBean">
 		<property name="dbType" value="${jdbc.dbType}" />
 	</bean>
 
 
 	<!-- 异常处理类 -->
 	<bean id="exceptionHandler"
-		class="org.jeewframework.common.exception.MyExceptionHandler" />
+		class="org.jeewframework.core.common.exception.MyExceptionHandler" />
 
 
 	<!-- 系统错误转发配置[并记录错误日志] -->
@@ -108,12 +108,12 @@
 		<!-- 字符集拦截器-->
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
-			<bean class="org.jeewframework.interceptors.EncodingInterceptor" />
+			<bean class="org.jeewframework.core.interceptors.EncodingInterceptor" />
 		</mvc:interceptor>
 		<!-- 权限拦截器-->
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
-			<bean class="org.jeewframework.interceptors.AuthInterceptor">
+			<bean class="org.jeewframework.core.interceptors.AuthInterceptor">
 				<property name="excludeUrls"><!-- 排除下面列表urls，其它的urls进行拦截-->
 					<list>
 						<!--<value>loginController.do?goPwdInit</value>-->

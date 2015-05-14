@@ -1,4 +1,4 @@
-package org.jeewframework.util;
+package org.jeewframework.core.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

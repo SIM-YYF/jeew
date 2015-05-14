@@ -1,4 +1,4 @@
-package org.jeewframework.util;
+package org.jeewframework.core.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContextAware;
